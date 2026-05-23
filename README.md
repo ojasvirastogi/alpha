@@ -1,4 +1,4 @@
-# HUBX Product Admin Dashboard
+#  Product Admin Dashboard
 
 A responsive product management dashboard built with React and Vite. The app uses the DummyJSON Products API to provide a clean SaaS-style admin interface with product listing, filtering, analytics, and product detail views.
 
@@ -84,6 +84,6 @@ index.html
 package.json
 ```
 
-## Assignment Coverage
+
 
 This project covers the required admin dashboard layout, product listing module, product detail page, analytics dashboard, performance optimization requirements, and URL state synchronization. It also includes bonus functionality for live product updates and column customization.
