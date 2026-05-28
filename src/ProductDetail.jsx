@@ -53,7 +53,7 @@ function ProductDetail({ product, loading, onBack }) {
           </div>
           <div className="detail-meta">
             <div><span>Brand</span><strong>{product.brand || 'Unbranded'}</strong></div>
-            <div><span>SKU</span><strong>{product.sku || `HX-${product.id}`}</strong></div>
+            <div><span>SKU</span><strong>{product.sku || `AL-${product.id}`}</strong></div>
             <div><span>Warranty</span><strong>{product.warrantyInformation || 'Standard warranty'}</strong></div>
             <div><span>Shipping</span><strong>{product.shippingInformation || 'Standard shipping'}</strong></div>
           </div>

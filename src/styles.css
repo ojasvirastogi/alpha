@@ -38,6 +38,67 @@ button {
   display: flex;
 }
 
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 34%),
+    linear-gradient(315deg, rgba(5, 150, 105, 0.12), transparent 38%),
+    var(--bg);
+}
+
+.login-panel {
+  width: min(820px, 100%);
+  display: grid;
+  gap: 22px;
+  padding: 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.login-panel h1 {
+  font-size: 34px;
+}
+
+.login-panel p,
+.login-card p {
+  color: var(--muted);
+}
+
+.login-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.login-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.login-card:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.login-card span {
+  display: block;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 3px 0 8px;
+}
+
 .sidebar {
   position: sticky;
   top: 0;
@@ -120,6 +181,23 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
+}
+
+.logout-button {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.logout-button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .avatar,
@@ -481,7 +559,7 @@ tbody tr:hover {
 }
 
 .product-card {
-  border: 0;
+  border: 1px solid var(--line);
   text-align: left;
   padding: 14px;
   display: grid;
@@ -513,11 +591,16 @@ tbody tr:hover {
 }
 
 .card-footer,
+.card-actions,
 .pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+.card-actions {
+  align-self: end;
 }
 
 .pagination {
@@ -533,6 +616,29 @@ tbody tr:hover {
   padding: 0 12px;
   gap: 6px;
   color: #344054;
+}
+
+.publish-toggle {
+  min-width: 94px;
+  height: 34px;
+  border: 1px solid #fecaca;
+  border-radius: 999px;
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.publish-toggle.active {
+  border-color: #bbf7d0;
+  background: #ecfdf3;
+  color: #047857;
+}
+
+.publish-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .pagination button:disabled {
@@ -780,6 +886,7 @@ tbody tr:hover {
 
   .metric-grid,
   .metric-grid.compact,
+  .login-options,
   .product-grid,
   .detail-stats,
   .detail-meta {
