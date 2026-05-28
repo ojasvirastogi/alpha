@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 #  Product Admin Dashboard
-=======
 # Alpha Product Admin Dashboard
->>>>>>> f44b3d7 (Add Alpha role-based dashboard updates)
 
 A responsive product management dashboard built with React and Vite. The app uses the DummyJSON Products API to provide a clean SaaS-style admin interface with product listing, filtering, analytics, and product detail views.
 
